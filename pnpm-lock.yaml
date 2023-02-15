@@ -5,8 +5,8 @@ importers:
   .:
     specifiers:
       '@ckeditor/ckeditor5-inspector': ^4.1.0
-      '@ckeditor/ckeditor5-react': ^5.0.6
-      '@ckeditor/ckeditor5-utils': ^36.0.1
+      '@ckeditor/ckeditor5-react': ^5.0.2
+      '@ckeditor/ckeditor5-utils': ^35.2.1
       '@songbinghui/ckeditor5': 'workspace:'
       '@types/ckeditor__ckeditor5-core': ^33.0.3
       '@types/ckeditor__ckeditor5-editor-classic': ^27.1.2
@@ -21,7 +21,7 @@ importers:
     dependencies:
       '@ckeditor/ckeditor5-inspector': 4.1.0
       '@ckeditor/ckeditor5-react': 5.0.6_react@18.2.0
-      '@ckeditor/ckeditor5-utils': 36.0.1
+      '@ckeditor/ckeditor5-utils': 35.4.0
       '@songbinghui/ckeditor5': link:packages/ckeditor
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-editor-classic': 27.1.2
@@ -732,13 +732,6 @@ packages:
     engines: {node: '>=14.0.0', npm: '>=5.7.1'}
     dependencies:
       lodash-es: 4.17.21
-
-  /@ckeditor/ckeditor5-utils/36.0.1:
-    resolution: {integrity: sha512-TW/YRb0OQe88IyqRoq2xS02iXOG82NQybzMuFDnGyCaFV0hA/9ysOyWwFpxDLcPDhDgVJZIxuwvFaek9x+uCMA==}
-    engines: {node: '>=14.0.0', npm: '>=5.7.1'}
-    dependencies:
-      lodash-es: 4.17.21
-    dev: false
 
   /@ckeditor/ckeditor5-widget/35.4.0:
     resolution: {integrity: sha512-SNYOXXWu7XV1BZET+ar0Cea25836vzNtUqXlDPwBx/jrmK86b8GMbFR99P2bUG0NvtIsH5cSk7XCmnxb4ZQ6wA==}
