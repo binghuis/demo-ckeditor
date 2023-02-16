@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <Editor ref={editorRef}  />
-      {editorRef.current}
     </div>
   );
 }

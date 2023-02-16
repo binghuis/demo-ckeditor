@@ -63,7 +63,7 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
         config={{
           placeholder: "",
           toolbar: {
-            items: toolbarItems,
+            // items: toolbarItems,
             shouldNotGroupWhenFull: false,
           },
         }}
