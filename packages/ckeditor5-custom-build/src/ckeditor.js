@@ -59,7 +59,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 
-class Editor extends ClassicEditor {}
+class Editor extends ClassicEditor { }
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
@@ -122,46 +122,47 @@ Editor.builtinPlugins = [
 
 // Editor configuration.
 Editor.defaultConfig = {
-	toolbar: {
-		items: [
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'outdent',
-			'indent',
-			'|',
-			'imageUpload',
-			'blockQuote',
-			'insertTable',
-			'undo',
-			'redo',
-			'alignment',
-			'code',
-			'codeBlock',
-			'findAndReplace',
-			'fontSize',
-			'fontFamily',
-			'fontColor',
-			'fontBackgroundColor',
-			'highlight',
-			'horizontalLine',
-			'htmlEmbed',
-			'imageInsert',
-			'pageBreak',
-			'sourceEditing',
-			'subscript',
-			'strikethrough',
-			'underline',
-			'removeFormat',
-			'style',
-			'superscript'
-		]
-	},
+	toolbar: [
+		'removeFormat',
+		'|',
+		'undo',
+		'redo',
+		'|',
+		'heading',
+		'bold',
+		'italic',
+		'link',
+		'bulletedList',
+		'numberedList',
+		'|',
+		'outdent',
+		'indent',
+		'|',
+		'blockQuote',
+		'alignment',
+		'code',
+		'codeBlock',
+		'findAndReplace',
+		{
+			label: '字体',
+			icon: 'text',
+			items: ['fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor']
+		},
+		{
+			label: '插入',
+			icon: 'plus',
+			items: ['imageInsert', 'insertTable']
+		},
+		'highlight',
+		'htmlEmbed',
+		// 'pageBreak',
+		'sourceEditing',
+		// 'style',
+		{
+			label: '更多',
+			items: ['subscript', 'superscript', 'strikethrough', 'underline', 'horizontalLine']
+		},
+	],
 	language: 'zh-cn',
 	image: {
 		toolbar: [
