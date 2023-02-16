@@ -58,7 +58,7 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
   return (
     <div className={className} style={{ color: "black" }}>
       <CKEditor
-        editor={ClassicEditor.Editor}
+        editor={ClassicEditor}
         data={editorData}
         config={{
           placeholder: "",
