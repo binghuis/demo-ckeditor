@@ -1,25 +1,28 @@
 {
-  "name": "my-turborepo",
-  "version": "0.0.0",
+  "name": "web",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "preinstall": "npx only-allow pnpm"
   },
+  "dependencies": {
+    "@ckeditor/ckeditor5-inspector": "^4.1.0",
+    "@ckeditor/ckeditor5-react": "^5.0.6",
+    "@types/ckeditor__ckeditor5-build-classic": "^29.0.1",
+    "editorconfig": "link:@types/ckeditor__ckeditor5-core/src/editor/editorconfig",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
-  "packageManager": "pnpm@7.26.2"
+    "ckeditor5-custom-build": "workspace:*",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
 }
