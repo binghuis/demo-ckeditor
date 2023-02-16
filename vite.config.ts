@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     // 依赖预构建，将 commonjs 模块转成 es module
-    include: ['@songbinghui/ckeditor5'],
+    include: ['@ckeditor/ckeditor5-build-classic'],
   }
 })

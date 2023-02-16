@@ -10,10 +10,10 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "workspace:*",
     "@ckeditor/ckeditor5-inspector": "^4.1.0",
-    "@ckeditor/ckeditor5-react": "^5.0.2",
-    "@ckeditor/ckeditor5-utils": "^35.2.1",
-    "@songbinghui/ckeditor5": "workspace:",
+    "@ckeditor/ckeditor5-react": "^5.0.6",
+    "@ckeditor/ckeditor5-utils": "^36.0.1",
     "@types/ckeditor__ckeditor5-core": "^33.0.3",
     "@types/ckeditor__ckeditor5-editor-classic": "^27.1.2",
     "only-allow": "^1.1.1",

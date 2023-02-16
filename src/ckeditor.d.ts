@@ -19,7 +19,7 @@ declare module '@ckeditor/ckeditor5-react' {
   export { CKEditor };
 }
 
-declare module '@songbinghui/ckeditor5' {
+declare module '@ckeditor/ckeditor5-build-classic' {
   import ClassicEditor from '@types/ckeditor__ckeditor5-editor-classic/src/classiceditor';
   const Editor: ClassicEditor;
   export default Editor;

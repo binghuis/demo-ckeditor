@@ -1,4 +1,4 @@
-import ClassicEditor from "@songbinghui/ckeditor5";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 class CustomUploadAdapter {
   loader: any;

@@ -1,5 +1,5 @@
 import { CKEditor } from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@songbinghui/ckeditor5";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import UploadAdapter from "../../utils/upload-adapter";
 import CKEditorInspector from "@ckeditor/ckeditor5-inspector";
 import React, {
