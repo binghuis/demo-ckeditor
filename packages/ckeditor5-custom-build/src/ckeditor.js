@@ -38,7 +38,6 @@ import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage.js';
-import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown.js';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention.js';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
@@ -102,7 +101,6 @@ Editor.builtinPlugins = [
 	Italic,
 	Link,
 	LinkImage,
-	Markdown,
 	Mention,
 	PageBreak,
 	Paragraph,

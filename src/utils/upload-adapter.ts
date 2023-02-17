@@ -29,7 +29,7 @@ class CustomUploadAdapter {
   }
 }
 
-export default function UploadAdapter(editor: typeof ClassicEditor) {
+export default function UploadAdapter(editor: ClassicEditor) {
   editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
     return new CustomUploadAdapter(loader);
   };

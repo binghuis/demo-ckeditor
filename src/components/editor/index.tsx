@@ -7,7 +7,10 @@ import React, {
   useEffect,
   useImperativeHandle,
   useState,
+  PropsWithChildren,
+  ReactNode,
 } from "react";
+import EditorView from "../editor-view";
 
 interface IProps {
   className?: string;
@@ -25,6 +28,7 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
 
   return (
     <div className={className} style={{ color: "black" }}>
+      <EditorView data={editorData} />
       <CKEditor
         editor={ClassicEditor}
         data={editorData}
@@ -93,7 +97,6 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
               }
             }
           );
-          console.log(111, editor);
           UploadAdapter(editor);
           if (!import.meta.env.PROD) {
             CKEditorInspector.attach(editor);
@@ -118,5 +121,4 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
 });
 
 Editor.displayName = "Editor";
-
 export default Editor;
