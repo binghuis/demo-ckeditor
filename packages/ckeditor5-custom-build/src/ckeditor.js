@@ -58,11 +58,15 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
+import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
+import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
 
 class Editor extends ClassicEditor { }
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
+	HeadingButtonsUI,
+	ParagraphButtonUI,
 	Alignment,
 	Autoformat,
 	AutoImage,
@@ -122,45 +126,121 @@ Editor.builtinPlugins = [
 
 // Editor configuration.
 Editor.defaultConfig = {
+	heading: {
+		options: [
+			{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+			{ model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+			{ model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+			{ model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+			// { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+			// { model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
+			// { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' }
+		]
+	},
+	fontFamily: {
+		options: [
+			'宋体, SimSun, Songti SC',
+			'黑体, SimHei, STHeiti',
+			'楷体, KaiTi, STKaiti',
+			'仿宋, FangSong, STFangsong',
+			'微软雅黑, Microsoft Yahei, Hiragino Sans GB',
+		],
+		supportAllValues: true
+	},
+	fontSize: {
+		options: [12, 14, 16, 20, 24, 30],
+		supportAllValues: true,
+	},
+	fontColor: {
+		colors: [
+			{
+				color: '#1890ff',
+				label: 'blue-6'
+			},
+			{
+				color: '#52c41a',
+				label: 'green-6'
+			},
+			{
+				color: '#faad14',
+				label: 'gold-6'
+			},
+			{
+				color: '#ff4d4f',
+				label: 'red-5'
+			},
+			{
+				color: '#000000',
+				label: 'black'
+			},
+			{
+				color: '#00000073',
+				label: 'secondary'
+			},
+			{
+				color: '#00000040',
+				label: 'disable'
+			},
+			{
+				color: '#ffffff',
+				label: 'white'
+			}
+		],
+		columns: 4,
+	},
+	fontBackgroundColor: {
+		colors: [
+			{
+				color: '#61DDAA',
+				label: 'Cyan'
+			},
+			{
+				color: '#F6BD16',
+				label: 'Sunrise Yellow'
+			},
+			{
+				color: '#ffe58f',
+				label: 'Mark'
+			},
+			{
+				color: '#78D3F8',
+				label: 'Daybreak Blue'
+			},
+			{
+				color: '#F08BB4',
+				label: 'Magenta'
+			}
+		]
+	},
 	toolbar: [
-		'removeFormat',
+		'paragraph', 'heading1', 'heading2', 'heading3',
 		'|',
-		'undo',
-		'redo',
+		{
+			label: 'A drop-down with a custom icon',
+			icon: 'bold',
+			items: ['bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript']
+		},
+		'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
 		'|',
-		'heading',
-		'bold',
-		'italic',
-		'link',
-		'bulletedList',
-		'numberedList',
+		'link', 'imageInsert', 'insertTable',
 		'|',
-		'outdent',
-		'indent',
-		'|',
-		'blockQuote',
 		'alignment',
+		'bulletedList', 'numberedList',
+		'outdent', 'indent',
+		'|',
 		'code',
-		'codeBlock',
+		'blockQuote',
+		'horizontalLine',
+		'|',
+		'removeFormat',
 		'findAndReplace',
-		{
-			label: '字体',
-			icon: 'text',
-			items: ['fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor']
-		},
-		{
-			label: '插入',
-			icon: 'plus',
-			items: ['imageInsert', 'insertTable']
-		},
-		'highlight',
-		'htmlEmbed',
+		'undo', 'redo',
 		// 'pageBreak',
-		'sourceEditing',
 		// 'style',
+		'|',
 		{
 			label: '更多',
-			items: ['subscript', 'superscript', 'strikethrough', 'underline', 'horizontalLine']
+			items: ['codeBlock', 'htmlEmbed', 'sourceEditing',]
 		},
 	],
 	language: 'zh-cn',

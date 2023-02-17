@@ -9,38 +9,6 @@ import React, {
   useState,
 } from "react";
 
-const toolbarItems: string[] = [
-  "heading",
-  "|",
-  "removeFormat",
-  "bold",
-  "italic",
-  "strikethrough",
-  "underline",
-  "|",
-  "bulletedList",
-  "numberedList",
-  "|",
-  "outdent",
-  "indent",
-  "alignment",
-  "|",
-  "findAndReplace",
-  "|",
-  "fontSize",
-  "fontFamily",
-  "fontColor",
-  "|",
-  "link",
-  "insertTable",
-  "ImageInsert",
-  "|",
-  "undo",
-  "redo",
-  "|",
-  "SourceEditing",
-];
-
 interface IProps {
   className?: string;
   data?: string;
@@ -62,10 +30,37 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
         data={editorData}
         config={{
           placeholder: "",
-          toolbar: {
-            // items: toolbarItems,
-            shouldNotGroupWhenFull: false,
-          },
+          toolbar: [
+            'paragraph', 'heading1', 'heading2', 'heading3',
+            '|',
+            {
+              label: 'A drop-down with a custom icon',
+              icon: 'bold',
+              items: ['bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript']
+            },
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
+            '|',
+            'link', 'imageInsert', 'insertTable',
+            '|',
+            'alignment',
+            'bulletedList', 'numberedList',
+            'outdent', 'indent',
+            '|',
+            'code',
+            'blockQuote',
+            'horizontalLine',
+            '|',
+            'removeFormat',
+            'findAndReplace',
+            'undo', 'redo',
+            // 'pageBreak',
+            // 'style',
+            '|',
+            {
+              label: '更多',
+              items: ['codeBlock', 'htmlEmbed', 'sourceEditing',]
+            },
+          ],
         }}
         onReady={(editor) => {
           const editorRoot = editor.editing.view.document.getRoot();
