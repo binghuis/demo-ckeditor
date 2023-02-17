@@ -22,7 +22,6 @@ import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
-import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
 import HtmlComment from '@ckeditor/ckeditor5-html-support/src/htmlcomment.js';
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed.js';
@@ -85,7 +84,6 @@ Editor.builtinPlugins = [
 	FontSize,
 	GeneralHtmlSupport,
 	Heading,
-	Highlight,
 	HorizontalLine,
 	HtmlComment,
 	HtmlEmbed,
@@ -214,7 +212,7 @@ Editor.defaultConfig = {
 		'paragraph', 'heading1', 'heading2', 'heading3',
 		'|',
 		{
-			label: 'A drop-down with a custom icon',
+			label: '文本样式',
 			icon: 'bold',
 			items: ['bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript']
 		},

@@ -11,25 +11,23 @@ importers:
       '@types/react-dom': ^18.0.10
       '@vitejs/plugin-react': ^3.1.0
       ckeditor5-custom-build: workspace:*
-      editorconfig: link:@types/ckeditor__ckeditor5-core/src/editor/editorconfig
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.9.3
       vite: ^4.1.0
     dependencies:
-      '@ckeditor/ckeditor5-react': 5.0.6_react@18.2.0
-      '@types/ckeditor__ckeditor5-build-classic': 29.0.1
-      editorconfig: link:@types/ckeditor__ckeditor5-core/src/editor/editorconfig
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
       '@ckeditor/ckeditor5-inspector': 4.1.0
+      '@ckeditor/ckeditor5-react': 5.0.6_react@18.2.0
+      '@types/ckeditor__ckeditor5-build-classic': 29.0.1
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@vitejs/plugin-react': 3.1.0_vite@4.1.1
+      '@vitejs/plugin-react': 3.1.0_vite@4.1.2
       ckeditor5-custom-build: link:packages/ckeditor5-custom-build
       typescript: 4.9.5
-      vite: 4.1.1
+      vite: 4.1.2
 
   packages/ckeditor5-custom-build:
     specifiers:
@@ -47,7 +45,6 @@ importers:
       '@ckeditor/ckeditor5-find-and-replace': ^36.0.1
       '@ckeditor/ckeditor5-font': ^36.0.1
       '@ckeditor/ckeditor5-heading': ^36.0.1
-      '@ckeditor/ckeditor5-highlight': ^36.0.1
       '@ckeditor/ckeditor5-horizontal-line': ^36.0.1
       '@ckeditor/ckeditor5-html-embed': ^36.0.1
       '@ckeditor/ckeditor5-html-support': ^36.0.1
@@ -74,8 +71,6 @@ importers:
       terser-webpack-plugin: ^4.2.3
       webpack: ^5.75.0
       webpack-cli: ^4.10.0
-    dependencies:
-      '@ckeditor/ckeditor5-core': 36.0.1
     devDependencies:
       '@ckeditor/ckeditor5-alignment': 36.0.1
       '@ckeditor/ckeditor5-autoformat': 36.0.1
@@ -83,6 +78,7 @@ importers:
       '@ckeditor/ckeditor5-basic-styles': 36.0.1
       '@ckeditor/ckeditor5-block-quote': 36.0.1
       '@ckeditor/ckeditor5-code-block': 36.0.1
+      '@ckeditor/ckeditor5-core': 36.0.1
       '@ckeditor/ckeditor5-dev-translations': 32.1.2
       '@ckeditor/ckeditor5-dev-utils': 32.1.2_hhrrucqyg4eysmfpujvov2ym5u
       '@ckeditor/ckeditor5-editor-classic': 36.0.1
@@ -90,7 +86,6 @@ importers:
       '@ckeditor/ckeditor5-find-and-replace': 36.0.1
       '@ckeditor/ckeditor5-font': 36.0.1
       '@ckeditor/ckeditor5-heading': 36.0.1
-      '@ckeditor/ckeditor5-highlight': 36.0.1
       '@ckeditor/ckeditor5-horizontal-line': 36.0.1
       '@ckeditor/ckeditor5-html-embed': 36.0.1
       '@ckeditor/ckeditor5-html-support': 36.0.1
@@ -408,6 +403,7 @@ packages:
       '@ckeditor/ckeditor5-engine': 36.0.1
       '@ckeditor/ckeditor5-utils': 36.0.1
       lodash-es: 4.17.21
+    dev: true
 
   /@ckeditor/ckeditor5-dev-translations/32.1.2:
     resolution: {integrity: sha512-TudMnRaiYMTNuDMWExeBh0Mk96GySWzgnh4fkXfoqiABQzd9Pp/Fcl40q0LJl4jtyS3qhQGFz88GxzkxAXXU9Q==}
@@ -470,6 +466,7 @@ packages:
     dependencies:
       '@ckeditor/ckeditor5-utils': 36.0.1
       lodash-es: 4.17.21
+    dev: true
 
   /@ckeditor/ckeditor5-enter/36.0.1:
     resolution: {integrity: sha512-FHZ43bltDGFyihfBOTwBOgsS2mMU2ATR9xxFEKlDP+8+P1bq4e0YkC3t4PuwtHIZMvNHiFxqvmFtA2eznGS7sQ==}
@@ -505,13 +502,6 @@ packages:
 
   /@ckeditor/ckeditor5-heading/36.0.1:
     resolution: {integrity: sha512-elVL6y8kFFB4wCjmVTYsbx5vFoNCsPn9fAJ4/T2tElb9wszs4BsbMjScUNwVomOxuSPy3x6Qt4HG1NFVoh1FKg==}
-    engines: {node: '>=14.0.0', npm: '>=5.7.1'}
-    dependencies:
-      ckeditor5: 36.0.1
-    dev: true
-
-  /@ckeditor/ckeditor5-highlight/36.0.1:
-    resolution: {integrity: sha512-ETMR6RHd7W0sBm9AECx0OXR16XPBehUJd11yEiiubt9+sjV5GuHKYoFAyU3Vv8fsAoWAEnKNroRxm7Xvga8jZw==}
     engines: {node: '>=14.0.0', npm: '>=5.7.1'}
     dependencies:
       ckeditor5: 36.0.1
@@ -617,7 +607,7 @@ packages:
     dependencies:
       prop-types: 15.8.1
       react: 18.2.0
-    dev: false
+    dev: true
 
   /@ckeditor/ckeditor5-remove-format/36.0.1:
     resolution: {integrity: sha512-bOE4s5e+DiTujGm7L2AQLOtv4/hV5dQkv3czrC3OZ6wtXxAnSYHb3wWPUeIrtJTOisri4Pf9oL6If7uFKWkZNg==}
@@ -707,6 +697,7 @@ packages:
     engines: {node: '>=14.0.0', npm: '>=5.7.1'}
     dependencies:
       lodash-es: 4.17.21
+    dev: true
 
   /@ckeditor/ckeditor5-widget/36.0.1:
     resolution: {integrity: sha512-on92cCRYLWTfwrpnFi5z4FY7NDhY+X+p6yuYStnB9d9jM3FJi3/7y2q9ojr8fSMot4pQsXCiFXzaF6yez+77wA==}
@@ -1040,14 +1031,14 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-upload': 27.0.7
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-alignment/29.0.7:
     resolution: {integrity: sha512-tZIF0svmHOHIvbnFM074b2CySBKKQxxZG5Y41UFAvkIYxel4LTZmFV3uTbdDTmniLRIbG219vOXtWHOJ5INB/A==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-autoformat/31.0.1:
     resolution: {integrity: sha512-E2bDInIyq6J5slWDAruCRTCvWxCH1Gm91d70/V2+YKiwpzj0X0EXyIPTqO01xTbdjHbCy9XiGIZ7fVLDrzchNQ==}
@@ -1055,20 +1046,20 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-typing': 32.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-autosave/32.0.0:
     resolution: {integrity: sha512-auGeVgBG4HLXwPTbHQSsfGZcItntaBuBQN8LSreZea0ur4SJ6NKfh25USqIIQs1DUWYMDPiK6ODwSn2mhyfJ2A==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-basic-styles/28.0.2:
     resolution: {integrity: sha512-ap6vMacs5rjcWRlHrYPsZPshHoPR7sruPgbuzduGQCy7X86SglOPwtd6XvMOMItslbLv1wYbJ3h9+S1kBOVvfA==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-typing': 32.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-block-quote/29.0.4:
     resolution: {integrity: sha512-FwNayTN7/8hdxCSA9cBiab4rEG3jERy+bF6qgr5pYwCiEthghlKT87IYqFYmVhznSsfqqR3KHi2a6GIfJMHpCA==}
@@ -1076,7 +1067,7 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-enter': 27.0.3
       '@types/ckeditor__ckeditor5-typing': 32.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-build-classic/29.0.1:
     resolution: {integrity: sha512-liWJN2v9xSJSLuU048nO7i7dr49T4REWhqSe7D7qcGcY3M5n7bVZnSNUnmBCB61WJg5iBl+KfwfdpDIDYp7+XQ==}
@@ -1100,7 +1091,7 @@ packages:
       '@types/ckeditor__ckeditor5-paste-from-office': 29.0.1
       '@types/ckeditor__ckeditor5-table': 33.0.0
       '@types/ckeditor__ckeditor5-typing': 32.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-ckfinder/29.0.3:
     resolution: {integrity: sha512-RQVFIg/RrJzaA19FHD9Qzzl36sVUyyqY9ozWhEUWAmlKMUZW0MQBBtMN3vX5dZ81JtOaPVcwklNAa2yw6dqlkg==}
@@ -1109,7 +1100,7 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-link': 32.0.4
       '@types/ckeditor__ckeditor5-ui': 32.0.2
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-clipboard/29.0.5:
     resolution: {integrity: sha512-AN7iniYu2C417LRNuOBIirBokStvPwXm/NG72o9Ivfn0/i7J0VZiJ8KGp7Wmvrcg/bhFYfZsTbEOVW2c/59Rjg==}
@@ -1117,14 +1108,14 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-widget': 33.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-cloud-services/29.0.4:
     resolution: {integrity: sha512-fZOj+HBQbGFJg3SwUYqfdIQtFNnG2U2OCWkKDCIzUuejkdSeicF8P5GLSyNuDP0nTDdQMBqEWgzljqLZkJnkHg==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-code-block/29.0.3:
     resolution: {integrity: sha512-x3D3B8I21za6VShc3twNRzKBN4+1+pOrsXhb+TPgQLG2Q9oeRgPXhaHMhdXGAGebMWhdFlPs0lTNsQTCVjXm6A==}
@@ -1133,14 +1124,14 @@ packages:
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-enter': 27.0.3
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-collaboration-core/27.1.2:
     resolution: {integrity: sha512-g0AKoJw820i/Biho6S9qYH1SaedjXr2P/gmnqO3k8/6HWiIMALaGDUkMgYvQC5nr+ZXIzLtv04Y0eb/9H1W3DQ==}
     dependencies:
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-core/33.0.3:
     resolution: {integrity: sha512-mVaU5+faOZ/2eR2jZb26H0JLqHLV/4a/p1/t7K9l8j5fMWTcubE5FRifjCk/TowazNW+/xcgRinyFnnUtNFUTQ==}
@@ -1173,7 +1164,7 @@ packages:
       '@types/ckeditor__ckeditor5-upload': 27.0.7
       '@types/ckeditor__ckeditor5-utils': 28.0.14
       '@types/ckeditor__ckeditor5-word-count': 29.0.2
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-easy-image/29.0.2:
     resolution: {integrity: sha512-pyBp+c0u1YydwAlWBubKzQrVkYmSApOjLmoc+F1yy/VuLelUhklaKnDlXo8HOjRXAndPHax0Yr966CWM7pQlpA==}
@@ -1182,7 +1173,7 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-image': 33.0.0
       '@types/ckeditor__ckeditor5-upload': 27.0.7
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-editor-classic/27.1.2:
     resolution: {integrity: sha512-Xrxav0Bq+rxr/H//nK4+n9o0GpHHMJpfe96wAm4EbjTI5mbBQYH5mCZmKdU8JzQTq6DUF8w9D92RIShqx0rvLw==}
@@ -1191,20 +1182,20 @@ packages:
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-engine/32.0.11:
     resolution: {integrity: sha512-mjP5DE+VvVdUqgn9SL1qTr5HRouG6xj+hiFu4Hzz3HWLLBaCEfK6dPUTc6/QM/nMNlNl8Ux9551qCYMoKanzvw==}
     dependencies:
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-enter/27.0.3:
     resolution: {integrity: sha512-qFv9QXk/kXkHQaS748FnO+XZoLOp34x25hOWpOFgBGbrfSZxJ6rYE+vk6BbX+b7sakj7glMctYeitNfGRMcVDQ==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-essentials/28.0.3:
     resolution: {integrity: sha512-vHtxf97CSVTRMGpxsEfDduRASHL32+9rvr1bVTmLlTgdykMiP0HY+TmFt07XtDTCpwAShehLu4bc8Qg4mkCCCA==}
@@ -1215,21 +1206,21 @@ packages:
       '@types/ckeditor__ckeditor5-select-all': 31.0.0
       '@types/ckeditor__ckeditor5-typing': 32.0.1
       '@types/ckeditor__ckeditor5-undo': 27.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-export-pdf/31.0.0:
     resolution: {integrity: sha512-ZQdL2eI/zpPtmMB8Qd5VHqvDx8VNsnCs4SPMWgSG1lrwC7tM0cnyLkCcVxHQYcvZIlihzEF/QJJ+AV9waxT9Pg==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-export-word/27.0.4:
     resolution: {integrity: sha512-2cpRFCsTHUh3xlbr3IdqfxhRs2AnfvViT0qekhk3SnP9VsUBiqN9CPcgGkBvk3huv30w5kiIpT2UH8l1Ff5Biw==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-font/33.0.1:
     resolution: {integrity: sha512-Hllu+akGhKWRtdahWqkewbmRV4DwPxuXjYzjlvqKoPMNst6UcBOYxeLR/HKoIqI4bn4Vc/p7mZvzKJs0R7CNGw==}
@@ -1238,7 +1229,7 @@ packages:
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-heading/29.0.3:
     resolution: {integrity: sha512-GfitzATatW4/ZJZ10VFI2OU1nG+r+c7JDHC/s/+9NzkqAyOEd8XTScAX0Sape+vqoNvnMUSAHNa03/ktAjDIqQ==}
@@ -1246,13 +1237,13 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-paragraph': 27.0.5
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-highlight/29.0.3:
     resolution: {integrity: sha512-Akq45EwzdI/egK/5YpKkoyYkEvq0w1EaBZMNOaKn8HaNFmhI2mQPwNzGHfEjbGDpKalI9cNTo0ImvqcqNgF+hg==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-image/33.0.0:
     resolution: {integrity: sha512-rEu93lPml8CuG8UesJa3BBH6Bi84eskeHXgH5kXCPi+lGQvhHd3VrNWa6XgihnO4Z/60i4IYhW48vdWZJ/Iv/A==}
@@ -1266,19 +1257,19 @@ packages:
       '@types/ckeditor__ckeditor5-upload': 27.0.7
       '@types/ckeditor__ckeditor5-utils': 28.0.14
       '@types/ckeditor__ckeditor5-widget': 33.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-indent/29.0.3:
     resolution: {integrity: sha512-ijVRz3hVR+KT4AmaHxOIyFd/Wi+XLtf5zDQuHP1DMAYgwudj6VGTfFl4vpebFB5wrWeY8EzkJZO1KsRlI21QdA==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-language/32.0.0:
     resolution: {integrity: sha512-8vd0nRXXZgV5oUF0g6DdBfwWAj3KlQGjpMgxgp6cXBQJ86fINCyyGpqpSmd5L4iSrJHAN3OfQaKLlh9PHLcCVQ==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-link/32.0.4:
     resolution: {integrity: sha512-ElABiBSynJvNpJ6kFSrOKfhtmVYUv7i158akP5VBnvI744hmvM3vl8D3Jjfj+/xKBFkHpJG9YN9XA0BSr+sOqA==}
@@ -1290,7 +1281,7 @@ packages:
       '@types/ckeditor__ckeditor5-typing': 32.0.1
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-list/35.3.0:
     resolution: {integrity: sha512-c1YDNrxy3mjLIXXEUxE/gMMjw3Js/DsY4mKlyqNhVQZ4tlxXYTvwJwR5noPKmU8OfOu8qewR5jzj+kTzMGwK9w==}
@@ -1301,7 +1292,7 @@ packages:
       '@types/ckeditor__ckeditor5-typing': 32.0.1
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-media-embed/29.0.3:
     resolution: {integrity: sha512-Z1EAZ/s04KTh+MJHZ2Xj2ugwX8lOBmlga7BWdzO4/HkJVeNzozWjp4Kxj9bxVr3GA+EaGWS6MHqgnhtN4gqhfg==}
@@ -1314,7 +1305,7 @@ packages:
       '@types/ckeditor__ckeditor5-undo': 27.0.3
       '@types/ckeditor__ckeditor5-utils': 28.0.14
       '@types/ckeditor__ckeditor5-widget': 33.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-mention/31.0.0:
     resolution: {integrity: sha512-V2Xq+OrpegeKK6lWaJkpKLZNgW/nLZPhRl6p1rirKsEyVpxxjFO3qSZr3Byb7lxeRkyVLgR23hVgcvt8vfb5AQ==}
@@ -1323,7 +1314,7 @@ packages:
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-minimap/33.0.0:
     resolution: {integrity: sha512-XLu/QyyWVMzQseSqo/hQDWoBKzpZS83pXUwUmJcnXoK+lxaxuh8hYxY8W9qY5vrhh2IHocyrNnjMsLJLtu9FTA==}
@@ -1331,20 +1322,20 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-pagination/27.0.3:
     resolution: {integrity: sha512-2kyuvQyyi30aZbZHCh0wGpSVp9Q+v5N5AvEHAuSvj6/GOmPRdxK4YyAK/aO3FapUb3bxgvQilyIdA6JtIx1inQ==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-paragraph/27.0.5:
     resolution: {integrity: sha512-Clevh7N4G15uFZky505TIM+9qYh9Qwf1oULyh9ntsCxDUNMpqhbmRjC/9J+qcTNLLZ1xppEs75r3ejM01ZkcQg==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-paste-from-office/29.0.1:
     resolution: {integrity: sha512-/Asiwf6/cIA1R0tLIpsdiwyqOKYGQLc9va/GdTeZSAj1YG5OENeMlUK32pRth5BxS7dFlhK/xDsP5NhY/ZEUvQ==}
@@ -1352,7 +1343,7 @@ packages:
       '@types/ckeditor__ckeditor5-clipboard': 29.0.5
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-real-time-collaboration/32.0.0:
     resolution: {integrity: sha512-u93DiYz2Q2+0ILR4srrmabWYlBx1LTcEusSbE7ylvQrcTs4qmgWlio81FyEMEtn9G5hG4kqH/WN0WfhHjWoFTQ==}
@@ -1361,7 +1352,7 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-restricted-editing/32.0.0:
     resolution: {integrity: sha512-FCOqLUbMxHBaghkXuVHl6hJy9VmimlEXPiMSHeK1jmjq3prsCvavup31Ps+zhwPlo0Bd7aS7GBdUJPGuYkYP9w==}
@@ -1369,13 +1360,13 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-select-all/31.0.0:
     resolution: {integrity: sha512-Sgp9N7HHdRcE+9UZlamI3f3ZUCt1fbAYyBv3OhmS9RO9Ev/vejGcSCh3tEddzLfqBcU9HNnl39SQK0zCjeKLEA==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-table/33.0.0:
     resolution: {integrity: sha512-a711hMOd4u/zqP/dTvEoP/bpnKLxfRasaZtiv3kepIAYub2Acz5ZOi9Gha71sWRwGK3Jeq+4q8gPuNJHYSRttQ==}
@@ -1385,7 +1376,7 @@ packages:
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
       '@types/ckeditor__ckeditor5-widget': 33.0.1
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-track-changes/32.0.0:
     resolution: {integrity: sha512-fFe+Tnni2BzrnOYD46zSkAf/StCSAaClN+lILHlWGBKo1xMod1T+hcsrnPkVrFwYSlXraDIvJIEeArrXYCKGnA==}
@@ -1395,7 +1386,7 @@ packages:
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-typing/32.0.1:
     resolution: {integrity: sha512-DskFBdfcUACpxVjhdpZTCD8H3gnG/zu08kWyT6TczuBJEXTRoCfX/lZ0Dh7sd20/dxow21pLC4V9Uv/yNUquBA==}
@@ -1403,7 +1394,7 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-ui/32.0.2:
     resolution: {integrity: sha512-0cAaEtXB+i8jnSQMVB50LqI91gJkmG8AnFsowpRPJczsnakMNYTlV+cEhPMe2RbwWxScler0jLmUNsbEORZOTw==}
@@ -1411,14 +1402,14 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-undo/27.0.3:
     resolution: {integrity: sha512-UpbmO0V82XvoVsnIjdM1Cb9RE9lB9vxGYKkQUzGwtw4wZbMb1A+CMIYkZIXO3aNs6x42F562ymFpjjkHBzgLHA==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-upload/27.0.7:
     resolution: {integrity: sha512-E8ubVL/94RX4qQe5M7OmSEmH1sTRfz0cwSmfe/vRlTedzM5pzwczXXMYzbnbz28UzOmraOS0Zgq+9WVBcPHJ6Q==}
@@ -1426,14 +1417,14 @@ packages:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-utils/28.0.14:
     resolution: {integrity: sha512-EJmGXoBOAxSwQIWdj3EEx4f7LWLkAP5P5RNYnWEUwBO3e3MdtLt/f8mTRyx1bnt1dmdrrAKD9hVJx1216vXOnQ==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-widget/33.0.1:
     resolution: {integrity: sha512-dHhFdVj2LFo0nCYJOYB5hohZiJNrkI0xICBBejbnzHxzyjxgYpaUoOKsItjxl49DeCdEJ82DU9Wu/cpmTJyCKw==}
@@ -1444,14 +1435,14 @@ packages:
       '@types/ckeditor__ckeditor5-typing': 32.0.1
       '@types/ckeditor__ckeditor5-ui': 32.0.2
       '@types/ckeditor__ckeditor5-utils': 28.0.14
-    dev: false
+    dev: true
 
   /@types/ckeditor__ckeditor5-word-count/29.0.2:
     resolution: {integrity: sha512-eZ9NwCtTsWOLtNYxLfNvBLx6DfcPgYh4+2p9508zQbQ4x9jMOgs9Vx4tGbFVM501eIGCp4g1XjobbWGuBJqpMA==}
     dependencies:
       '@types/ckeditor__ckeditor5-core': 33.0.3
       '@types/ckeditor__ckeditor5-engine': 32.0.11
-    dev: false
+    dev: true
 
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
@@ -1516,7 +1507,7 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
-  /@vitejs/plugin-react/3.1.0_vite@4.1.1:
+  /@vitejs/plugin-react/3.1.0_vite@4.1.2:
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1527,7 +1518,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.20.12
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.1.1
+      vite: 4.1.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1766,8 +1757,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001453
-      electron-to-chromium: 1.4.299
+      caniuse-lite: 1.0.30001456
+      electron-to-chromium: 1.4.301
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -1816,13 +1807,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001453
+      caniuse-lite: 1.0.30001456
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001453:
-    resolution: {integrity: sha512-R9o/uySW38VViaTrOtwfbFEiBFUh7ST3uIG4OEymIG3/uKdHDO4xk/FaqfUw0d+irSUyFPy3dZszf9VvSTPnsA==}
+  /caniuse-lite/1.0.30001456:
+    resolution: {integrity: sha512-XFHJY5dUgmpMV25UqaD4kVq2LsiaU5rS8fb0f17pCoXQiQslzmFgnfOxfvo1bTpTqf7dwG/N/05CnLCnOEKmzA==}
     dev: true
 
   /chalk/2.4.2:
@@ -2161,8 +2152,8 @@ packages:
       domhandler: 4.3.1
     dev: true
 
-  /electron-to-chromium/1.4.299:
-    resolution: {integrity: sha512-lQ7ijJghH6pCGbfWXr6EY+KYCMaRSjgsY925r1p/TlpSfVM1VjHTcn1gAc15VM4uwti283X6QtjPTXdpoSGiZQ==}
+  /electron-to-chromium/1.4.301:
+    resolution: {integrity: sha512-bz00ASIIDjcgszZKuEA1JEFhbDjqUNbQ/PEhNEl1wbixzYpeTp2H2QWjsQvAL2T1wJBdOwCF5hE896BoMwYKrA==}
     dev: true
 
   /emojis-list/3.0.0:
@@ -2638,6 +2629,7 @@ packages:
 
   /lodash-es/4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
 
   /lodash.memoize/4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -2652,7 +2644,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lru-cache/5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -2804,7 +2795,7 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
-    dev: false
+    dev: true
 
   /once/1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
@@ -3355,7 +3346,7 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: false
+    dev: true
 
   /punycode/2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
@@ -3395,7 +3386,7 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: false
+    dev: true
 
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
@@ -3407,7 +3398,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -3484,8 +3474,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup/3.15.0:
-    resolution: {integrity: sha512-F9hrCAhnp5/zx/7HYmftvsNBkMfLfk/dXUh73hPSM2E3CRgap65orDNJbLetoiUFwSAk6iHPLvBrZ5iHYvzqsg==}
+  /rollup/3.16.0:
+    resolution: {integrity: sha512-9wE1H5N1SJqnROpQanBGJ7lrIitwlUYGj4Va4eyf3+vNhoIHLPLag2/CUGIiq3V9lHOBJB6zTsGsPvc50oeihg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3720,7 +3710,7 @@ packages:
       schema-utils: 3.1.1
       serialize-javascript: 5.0.1
       source-map: 0.6.1
-      terser: 5.16.3
+      terser: 5.16.4
       webpack: 5.75.0_webpack-cli@4.10.0
       webpack-sources: 1.4.3
     transitivePeerDependencies:
@@ -3747,12 +3737,12 @@ packages:
       jest-worker: 27.5.1
       schema-utils: 3.1.1
       serialize-javascript: 6.0.1
-      terser: 5.16.3
+      terser: 5.16.4
       webpack: 5.75.0_webpack-cli@4.10.0
     dev: true
 
-  /terser/5.16.3:
-    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==}
+  /terser/5.16.4:
+    resolution: {integrity: sha512-5yEGuZ3DZradbogeYQ1NaGz7rXVBDWujWlx1PT8efXO6Txn+eWbfKqB2bTDVmFXmePFkoLU6XI8UektMIEA0ug==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -3840,8 +3830,8 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite/4.1.1:
-    resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==}
+  /vite/4.1.2:
+    resolution: {integrity: sha512-MWDb9Rfy3DI8omDQySbMK93nQqStwbsQWejXRY2EBzEWKmLAXWb1mkI9Yw2IJrc+oCvPCI1Os5xSSIBYY6DEAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3868,7 +3858,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.15.0
+      rollup: 3.16.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

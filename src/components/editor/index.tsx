@@ -1,5 +1,6 @@
 import { CKEditor } from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "ckeditor5-custom-build";
+import CustomEditor from "ckeditor5-custom-build";
+import ClassicEditor from "ckeditor__ckeditor5-build-classic";
 import UploadAdapter from "../../utils/upload-adapter";
 import CKEditorInspector from "@ckeditor/ckeditor5-inspector";
 import React, {
@@ -7,8 +8,6 @@ import React, {
   useEffect,
   useImperativeHandle,
   useState,
-  PropsWithChildren,
-  ReactNode,
 } from "react";
 import EditorView from "../editor-view";
 
@@ -30,10 +29,22 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
     <div className={className} style={{ color: "black" }}>
       <EditorView data={editorData} />
       <CKEditor
-        editor={ClassicEditor}
+        editor={CustomEditor}
         data={editorData}
         config={{
           placeholder: "",
+          autosave: {
+            save(editor: ClassicEditor) {
+              // The saveData() function must return a promise
+              // which should be resolved when the data is successfully saved.
+              return new Promise<void>((resolved, reject) => {
+                console.log(editor.getData());
+                setTimeout(() => {
+                  resolved();
+                }, 3000);
+              });
+            },
+          },
           toolbar: {
             items: [
               "paragraph",
@@ -42,7 +53,7 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
               "heading3",
               "|",
               {
-                label: "A drop-down with a custom icon",
+                label: "文本样式",
                 icon: "bold",
                 items: [
                   "bold",
@@ -86,7 +97,7 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
             ],
           },
         }}
-        onReady={(editor) => {
+        onReady={(editor: ClassicEditor) => {
           const editorRoot = editor.editing.view.document.getRoot();
           editor.editing.view.change(
             (writer: {
@@ -102,17 +113,17 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
             CKEditorInspector.attach(editor);
           }
         }}
-        onChange={(event, editor) => {
+        onChange={(event: any, editor: ClassicEditor) => {
           const data = editor.getData();
           if (!data) {
             return;
           }
           setEditorData(data);
         }}
-        onBlur={(event, editor) => {
+        onBlur={(event: any, editor: ClassicEditor) => {
           console.log("Blur.", editor);
         }}
-        onFocus={(event, editor) => {
+        onFocus={(event: any, editor: ClassicEditor) => {
           console.log("Focus.", editor);
         }}
       />
