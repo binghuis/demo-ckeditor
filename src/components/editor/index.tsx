@@ -30,45 +30,70 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
         data={editorData}
         config={{
           placeholder: "",
-          toolbar: [
-            'paragraph', 'heading1', 'heading2', 'heading3',
-            '|',
-            {
-              label: 'A drop-down with a custom icon',
-              icon: 'bold',
-              items: ['bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript']
-            },
-            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
-            '|',
-            'link', 'imageInsert', 'insertTable',
-            '|',
-            'alignment',
-            'bulletedList', 'numberedList',
-            'outdent', 'indent',
-            '|',
-            'code',
-            'blockQuote',
-            'horizontalLine',
-            '|',
-            'removeFormat',
-            'findAndReplace',
-            'undo', 'redo',
-            // 'pageBreak',
-            // 'style',
-            '|',
-            {
-              label: '更多',
-              items: ['codeBlock', 'htmlEmbed', 'sourceEditing',]
-            },
-          ],
+          toolbar: {
+            items: [
+              "paragraph",
+              "heading1",
+              "heading2",
+              "heading3",
+              "|",
+              {
+                label: "A drop-down with a custom icon",
+                icon: "bold",
+                items: [
+                  "bold",
+                  "italic",
+                  "underline",
+                  "strikethrough",
+                  "subscript",
+                  "superscript",
+                ],
+              },
+              "fontSize",
+              "fontFamily",
+              "fontColor",
+              "fontBackgroundColor",
+              "|",
+              "link",
+              "imageInsert",
+              "insertTable",
+              "|",
+              "alignment",
+              "bulletedList",
+              "numberedList",
+              "outdent",
+              "indent",
+              "|",
+              "code",
+              "blockQuote",
+              "horizontalLine",
+              "|",
+              "removeFormat",
+              "findAndReplace",
+              "undo",
+              "redo",
+              // 'pageBreak',
+              // 'style',
+              "|",
+              {
+                label: "更多",
+                items: ["codeBlock", "|", "htmlEmbed", "|", "sourceEditing"],
+              },
+            ],
+          },
         }}
         onReady={(editor) => {
           const editorRoot = editor.editing.view.document.getRoot();
-          editor.editing.view.change((writer: { setStyle: (arg0: string, arg1: string, arg2: any) => void; }) => {
-            if (editorRoot) {
-              writer.setStyle("height", "580px", editorRoot);
+          editor.editing.view.change(
+            (writer: {
+              setStyle: (arg0: string, arg1: string, arg2: any) => void;
+            }) => {
+              if (editorRoot) {
+                writer.setStyle("height", "580px", editorRoot);
+              }
             }
-          });
+          );
+          console.log(111, editor);
           UploadAdapter(editor);
           if (!import.meta.env.PROD) {
             CKEditorInspector.attach(editor);

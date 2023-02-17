@@ -17,13 +17,13 @@ importers:
       typescript: ^4.9.3
       vite: ^4.1.0
     dependencies:
-      '@ckeditor/ckeditor5-inspector': 4.1.0
       '@ckeditor/ckeditor5-react': 5.0.6_react@18.2.0
       '@types/ckeditor__ckeditor5-build-classic': 29.0.1
       editorconfig: link:@types/ckeditor__ckeditor5-core/src/editor/editorconfig
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
+      '@ckeditor/ckeditor5-inspector': 4.1.0
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react': 3.1.0_vite@4.1.1
@@ -560,7 +560,7 @@ packages:
   /@ckeditor/ckeditor5-inspector/4.1.0:
     resolution: {integrity: sha512-yKoIFpaSVQQIhgFEyoltwG40OSsWX5psYdYvNxW84nfxgrs90DJrbMQDtdchVZNMXBu6CkJfPiPG0WBLU9su3g==}
     engines: {node: '>=14.0.0', npm: '>=5.7.1'}
-    dev: false
+    dev: true
 
   /@ckeditor/ckeditor5-link/36.0.1:
     resolution: {integrity: sha512-u0E22wCzgAWMlg5BemYAUHws6zausSek+tmI6VmTRibogsUsfso3JnWI0RXNiEd4i2w1wRspvb9S/D8iy7n4fA==}

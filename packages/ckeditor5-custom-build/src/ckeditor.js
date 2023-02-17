@@ -240,29 +240,79 @@ Editor.defaultConfig = {
 		'|',
 		{
 			label: '更多',
-			items: ['codeBlock', 'htmlEmbed', 'sourceEditing',]
+			items: ['codeBlock', '|', 'htmlEmbed', '|', 'sourceEditing',]
 		},
 	],
 	language: 'zh-cn',
+	htmlEmbed: {
+		showPreviews: true,
+	},
 	image: {
+		styles: [
+			'alignCenter',
+			'alignLeft',
+			'alignRight'
+		],
+		resizeOptions: [
+			{
+				name: 'resizeImage:original',
+				label: 'Original',
+				value: null
+			},
+			{
+				name: 'resizeImage:50',
+				label: '50%',
+				value: '50'
+			},
+			{
+				name: 'resizeImage:75',
+				label: '75%',
+				value: '75'
+			}
+		],
 		toolbar: [
-			'imageTextAlternative',
-			'toggleImageCaption',
-			'imageStyle:inline',
-			'imageStyle:block',
-			'imageStyle:side',
-			'linkImage'
-		]
+			'imageTextAlternative', 'toggleImageCaption', '|',
+			'imageStyle:inline', 'imageStyle:wrapText', 'imageStyle:breakText', 'imageStyle:side', '|',
+			'resizeImage'
+		],
+		insert: {
+			integrations: [
+				'insertImageViaUrl'
+			]
+		}
+	},
+	list: {
+		properties: {
+			styles: true,
+			startIndex: true,
+			reversed: true
+		}
+	},
+	link: {
+		decorators: {
+			toggleDownloadable: {
+				mode: 'manual',
+				label: 'Downloadable',
+				attributes: {
+					download: 'file'
+				}
+			},
+			openInNewTab: {
+				mode: 'manual',
+				label: 'Open in a new tab',
+				defaultValue: true,			// This option will be selected by default.
+				attributes: {
+					target: '_blank',
+					rel: 'noopener noreferrer'
+				}
+			}
+		}
 	},
 	table: {
 		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells',
-			'tableCellProperties',
-			'tableProperties'
+			'tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties', 'toggleTableCaption'
 		]
-	}
+	},
 };
 
 export default Editor;
