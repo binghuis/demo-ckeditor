@@ -285,6 +285,7 @@ Editor.defaultConfig = {
 		}
 	},
 	link: {
+		defaultProtocol: 'https://',
 		decorators: {
 			toggleDownloadable: {
 				mode: 'manual',
