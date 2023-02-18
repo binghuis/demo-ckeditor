@@ -9,7 +9,7 @@ import React, {
   useImperativeHandle,
   useState,
 } from "react";
-import EditorView from "../editor-view";
+import ContentView from "../content-view";
 
 const toolbarItems = [
   "paragraph",
@@ -77,53 +77,55 @@ const Editor = forwardRef<string, IProps>((props, ref) => {
   }, [data]);
 
   return (
-    <div className={`${className} text-black`}>
-      <EditorView data={editorData} />
-      <CKEditor
-        editor={CustomEditor}
-        data={editorData}
-        config={{
-          placeholder: "",
-          autosave: {
-            save(editor: ClassicEditor) {
-              // The saveData() function must return a promise
-              // which should be resolved when the data is successfully saved.
-              return new Promise<void>((resolved, reject) => {
-                console.log("自动保存", editor.getData());
-                resolved();
-              });
+    <div className={`${className ?? ""} text-black`}>
+      <ContentView data={editorData} />
+      <div className="relative w-full">
+        <CKEditor
+          editor={CustomEditor}
+          data={editorData}
+          config={{
+            placeholder: "一笔一画一世界, 落墨千年香如故。",
+            autosave: {
+              save(editor: ClassicEditor) {
+                // The saveData() function must return a promise
+                // which should be resolved when the data is successfully saved.
+                return new Promise<void>((resolved, reject) => {
+                  console.log("自动保存", editor.getData());
+                  resolved();
+                });
+              },
             },
-          },
-          toolbar: {
-            items: toolbarItems,
-          },
-        }}
-        onReady={(editor: ClassicEditor) => {
-          const editorRoot = editor.editing.view.document.getRoot();
-          editor.editing.view.change((writer) => {
-            if (editorRoot) {
-              writer.setStyle("height", "580px", editorRoot);
+            toolbar: {
+              items: toolbarItems,
+            },
+          }}
+          onReady={(editor: ClassicEditor) => {
+            const editorRoot = editor.editing.view.document.getRoot();
+            editor.editing.view.change((writer) => {
+              if (editorRoot) {
+                writer.setStyle("height", "580px", editorRoot);
+              }
+            });
+            UploadAdapter(editor);
+            if (!import.meta.env.PROD) {
+              CKEditorInspector.attach(editor);
             }
-          });
-          UploadAdapter(editor);
-          if (!import.meta.env.PROD) {
-            CKEditorInspector.attach(editor);
-          }
-        }}
-        onChange={(event: any, editor: ClassicEditor) => {
-          const data = editor.getData();
-          if (!data) {
-            return;
-          }
-          setEditorData(data);
-        }}
-        onBlur={(event: any, editor: ClassicEditor) => {
-          console.log("Blur.", editor);
-        }}
-        onFocus={(event: any, editor: ClassicEditor) => {
-          console.log("Focus.", editor);
-        }}
-      />
+          }}
+          onChange={(event: any, editor: ClassicEditor) => {
+            const data = editor.getData();
+            if (!data) {
+              return;
+            }
+            setEditorData(data);
+          }}
+          onBlur={(event: any, editor: ClassicEditor) => {
+            console.log("Blur.", editor);
+          }}
+          onFocus={(event: any, editor: ClassicEditor) => {
+            console.log("Focus.", editor);
+          }}
+        />
+      </div>
     </div>
   );
 });
